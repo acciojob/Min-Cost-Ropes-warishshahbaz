@@ -5,17 +5,16 @@ function mincost(arr)
 	 	pq.push(arr[i]);
 	 }
 	pq.sort((a,b)=> b-a);
-	let res = 0;
+	let minimum_cost = 0;
 	while (pq.length >1) {
 		let first = pq.shift();
 		let sec = pq.shift();
-		res += first + sec ;
+		minimum_cost += first + sec ;
 		pq.push(first + sec);
 		pq.sort((a,b)=>b-a);
 	}
-	return res;
-//write your code here
-// return the min cost
+	return minimum_cost;
+
   
 }
 
