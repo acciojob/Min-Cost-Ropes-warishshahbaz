@@ -1,9 +1,9 @@
 function mincost(arr)
 { 
-	let pq = [];
-	 for (let i = 0; i < arr.length; i++) {
-	 	pq.push(arr[i]);
-	 }
+	let pq = arr;
+	 // for (let i = 0; i < arr.length; i++) {
+	 // 	pq.push(arr[i]);
+	 // }
 	pq.sort((a,b)=> b-a);
 	let minimum_cost = 0;
 	while (pq.length >1) {
